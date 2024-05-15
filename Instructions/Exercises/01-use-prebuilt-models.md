@@ -13,15 +13,15 @@ lab:
 Azure AI 문서 인텔리전스 서비스를 호출하려면 먼저 Azure에서 해당 서비스를 호스트할 리소스를 만들어야 합니다.
 
 1. 브라우저 탭의 [https://portal.azure.com](https://portal.azure.com?azure-portal=true)에서 Azure Portal을 열고 Azure 구독과 연결된 Microsoft 계정으로 로그인합니다.
-1. Azure Portal 홈페이지의 위쪽 검색 상자로 이동하여 **문서 인텔리전스**를 입력한 다음 **Enter** 키를 누릅니다.
+1. Azure Portal 홈페이지에서 상단 검색 상자로 이동하여 **문서 인텔리전스**를 입력한 다음 **Enter** 키를 누릅니다.
 1. **문서 인텔리전스** 페이지에서 **만들기**를 선택합니다.
 1. **문서 인텔리전스 만들기** 페이지에서 다음을 사용하여 리소스를 구성합니다.
     - **구독**: Azure 구독.
-    - **리소스 그룹**: *DocIntelligenceResources* 같은 고유한 이름이 있는 리소스 그룹을 선택하거나 만듭니다.
+    - **리소스 그룹**: *DocIntelligenceResources*와 같은 고유한 이름을 가진 리소스 그룹을 선택하거나 만듭니다.
     - **지역**: 사용자에게 가까운 지역을 선택합니다.
     - **이름**: 글로벌로 고유한 이름을 입력합니다.
-    - **가격 책정 계층**: **무료 F0**(사용 가능한 무료 계층이 없는 경우 **표준 S0** 선택)을 선택합니다.
-1. 그런 다음 **검토 + 만들기** 및 **만들기**를 선택합니다. Azure에서 Azure AI 문서 인텔리전스 리소스를 만드는 동안 기다립니다.
+    - **가격 책정 계층**: **무료 F0**을 선택합니다. 사용 가능한 무료 계층이 없으면 **표준 S0**을 선택합니다.
+1. 그런 다음 **검토 + 만들기**와 **만들기**를 선택합니다. Azure에서 Azure AI 문서 인텔리전스 리소스를 만드는 동안 기다립니다.
 1. 배포가 완료되면 **리소스로 이동**을 선택합니다. 이 연습의 나머지 부분에 대해 이 페이지를 열어 둡니다.
 
 ## 읽기 모델 사용
@@ -32,14 +32,15 @@ Azure AI 문서 인텔리전스 서비스를 호출하려면 먼저 Azure에서 
 1. **문서 분석**에서 **읽기** 타일을 선택합니다.
 1. 계정에 로그인하라는 메시지가 표시되면 Azure 자격 증명을 사용합니다.
 1. 사용할 Azure AI 문서 인텔리전스 리소스를 묻는 메시지가 나타나면 Azure AI 문서 인텔리전스 리소스를 만들 때 사용한 구독 및 리소스 이름을 선택합니다.
-1. 왼쪽의 문서 목록에서 **read-german.png**를 선택합니다.
+1. 왼쪽의 문서 목록에서 **read-german.pdf**를 선택합니다.
 
     ![Azure AI Document Intelligence Studio의 읽기 페이지를 보여 주는 스크린샷입니다.](../media/read-german-sample.png#lightbox)
 
+1. 왼쪽 상단에서 **분석 옵션**을 선택한 다음 **분석 옵션** 창에서 **언어** 확인란(**선택적 검색** 아래)을 선택하고 **저장**을 클릭합니다. 
 1. 왼쪽 위에서 **분석 실행**을 선택합니다.
 1. 분석이 완료되면 이미지에서 추출된 텍스트가 **콘텐츠** 탭의 오른쪽에 표시됩니다. 이 텍스트를 검토하고 정확도를 위해 원본 이미지의 텍스트와 비교합니다.
 1. **결과** 탭을 선택합니다. 이 탭에는 추출된 JSON 코드가 표시됩니다. 
-1. **결과** 탭에서 JSON 코드의 아래쪽으로 스크롤합니다. 읽기 모델이 각 범위의 언어를 검색했습니다. 대부분의 범위는 독일어(언어 코드 `de`)이지만 마지막 범위는 영어(언어 코드 `en`)입니다.
+1. **결과** 탭에서 JSON 코드의 아래쪽으로 스크롤합니다. 읽기 모델이 각 범위의 언어를 검색했습니다. 대부분의 범위는 독일어(언어 코드 `de`)로 되어 있지만 범위에서 다른 언어 코드를 찾을 수 있습니다(예: 영어 - 언어 코드 `en` - 마지막 범위 중 하나).
 
     ![Azure AI Document Intelligence Studio의 읽기 모델 결과에서 두 범위에 대한 언어 검색을 보여 주는 스크린샷입니다.](../media/language-detection.png#lightbox)
 
@@ -137,7 +138,6 @@ C# 및 Python용 애플리케이션과 문서 인텔리전스를 테스트하는
 
     ```csharp
     AnalyzeDocumentOperation operation = await client.AnalyzeDocumentFromUriAsync(WaitUntil.Completed, "prebuilt-invoice", fileUri);
-    await operation.WaitForCompletionAsync();
     ```
 
     **Python**
@@ -212,7 +212,7 @@ C# 및 Python용 애플리케이션과 문서 인텔리전스를 테스트하는
 
 ## 정리
 
-Azure 리소스 사용이 완료되면 [Azure Portal](https://portal.azure.com/?azure-portal=true)에서 리소스를 삭제하여 추가로 요금이 발생하지 않도록 해야 합니다.
+Azure 리소스 사용이 완료되면 추가 요금이 발생하지 않도록 [Azure Portal](https://portal.azure.com/?azure-portal=true)에서 리소스를 삭제해야 합니다.
 
 ## 자세한 정보
 
