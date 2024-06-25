@@ -16,6 +16,8 @@ lab:
 1. 팔레트를 열고(Shift+Ctrl+P) **Git: Clone** 명령을 실행하여 `https://github.com/MicrosoftLearning/mslearn-ai-document-intelligence` 리포지토리를 로컬 폴더(아무 폴더나 관계없음)에 복제합니다.
 1. 리포지토리가 복제되면 Visual Studio Code에서 폴더를 엽니다.
 
+    > **참고**: Visual Studio Code에서 열려는 코드를 신뢰하라는 팝업 메시지가 표시되면 팝업에서 **예, 작성자를 신뢰합니다.** 옵션을 클릭합니다.
+    
     > **참고**: 빌드 및 디버깅에 필요한 자산을 추가하라는 메시지가 표시되면 **나중에**를 선택합니다. Visual Studio Code에서 다른 팝업이 나타나면 안전하게 해제할 수 있습니다.
 
 1. 왼쪽 창에서 **Labfiles** 폴더를 확장하고 **03-composed-model** 디렉터리를 마우스 오른쪽 단추로 클릭합니다. 통합 터미널에서 열 옵션을 선택하고 다음 스크립트를 실행합니다.
