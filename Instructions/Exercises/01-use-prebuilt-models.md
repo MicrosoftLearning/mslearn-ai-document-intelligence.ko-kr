@@ -14,7 +14,7 @@ Azure AI 문서 인텔리전스 서비스를 호출하려면 먼저 Azure에서 
 
 1. 브라우저 탭의 [https://portal.azure.com](https://portal.azure.com?azure-portal=true)에서 Azure Portal을 열고 Azure 구독과 연결된 Microsoft 계정으로 로그인합니다.
 1. Azure Portal 홈페이지에서 상단 검색 상자로 이동하여 **문서 인텔리전스**를 입력한 다음 **Enter** 키를 누릅니다.
-1. **문서 인텔리전스** 페이지에서 **만들기**를 선택합니다.
+1. **문서 인텔리전스** 페이지에서 **문서 인텔리전스 만들기**를 선택합니다.
 1. **문서 인텔리전스 만들기** 페이지에서 다음을 사용하여 리소스를 구성합니다.
     - **구독**: Azure 구독.
     - **리소스 그룹**: *DocIntelligenceResources*와 같은 고유한 이름을 가진 리소스 그룹을 선택하거나 만듭니다.
@@ -81,7 +81,7 @@ C# 및 Python용 애플리케이션과 문서 인텔리전스를 테스트하는
     **Python**:
 
     ```powershell
-    pip install azure-ai-formrecognizer==3.3.0
+    pip install azure-ai-formrecognizer==3.3.3
     ```
 
 ## Azure 문서 인텔리전스 서비스를 사용할 코드 추가
