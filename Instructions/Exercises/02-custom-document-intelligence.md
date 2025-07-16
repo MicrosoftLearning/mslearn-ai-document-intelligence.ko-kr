@@ -97,11 +97,7 @@ Azure AI 문서 인텔리전스 서비스를 사용하려면 Azure 구독에 Azu
 1. **Labfiles/02-custom-document-intelligence** 폴더의 터미널에서 다음 명령을 입력하여 스크립트를 실행합니다.
 
     ```PowerShell
-    $currentdir=(Get-Item .).FullName
-    cd ..
     ./setup.cmd
-    cd $currentdir
-
     ```
 
 1. 스크립트가 완료되면 표시된 출력을 검토합니다.
