@@ -1,10 +1,1 @@
-#README
-
-We've turned off the ability to report issues directly on this repo and do not monitor PRs.
-
-Provide feedback here: https://aka.ms/provide-feedback
-
-Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
-
-# mslearn-document-intelligence
-Azure AI 문서 인텔리전스 모듈용 랩 파일
+> **참고**: 이 리포지토리는 보관 중이며 더 이상 유지 관리되지 않습니다. [AI 개발 정보 추출 솔루션](https://learn.microsoft.com/training/paths/ai-extract-information/) 학습 경로, [관련 랩 리포지토리](https://github.com/MicrosoftLearning/mslearn-ai-information-extraction), [Azure AI Foundry 설명서](https://learn.microsoft.com/azure/ai-foundry/)를 방문하세요.
